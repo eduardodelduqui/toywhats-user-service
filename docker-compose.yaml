@@ -1,0 +1,13 @@
+version: '3'
+services:
+  toywhats-user-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: toywhats-user-service
+    ports:
+      - '4040:4040'
+    command: npm run dev
+    restart: "on-failure"
+    volumes:
+      - .:/app
