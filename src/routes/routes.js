@@ -133,8 +133,6 @@ router.put('/users/:phone', async (req, res) => {
   }
 });
 
-module.exports = router;
-
 router.delete('/users/:phone', async (req, res) => {
   try {
     await User.deleteOne({ phone: req.params.phone })
